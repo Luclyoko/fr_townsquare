@@ -224,11 +224,11 @@
             </em>
           </li>
           <li>
-            <a href="https://github.com/bra1n/townsquare" target="_blank">
+            <a href="https://github.com/Luclyoko/fr_townsquare" target="_blank">
               {{ $t("Source code") }}
             </a>
             <em>
-              <a href="https://github.com/bra1n/townsquare" target="_blank">
+              <a href="https://github.com/Luclyoko/fr_townsquare" target="_blank">
                 <font-awesome-icon :icon="['fab', 'github']" />
               </a>
             </em>

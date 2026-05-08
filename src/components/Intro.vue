@@ -25,7 +25,7 @@
         path='This project is free and open source and can be found on {github}. It is not affiliated with The Pandemonium Institute. "Blood on the Clocktower" is a trademark of Steven Medway and The Pandemonium Institute.'
       >
         <template #github>
-          <a href="https://github.com/bra1n/townsquare" target="_blank"
+          <a href="https://github.com/Luclyoko/fr_townsquare" target="_blank"
             >GitHub</a
           >
         </template>
