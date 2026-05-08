@@ -368,12 +368,12 @@
     "team": "outsider"
   },
   {
-    "ability": "Chaque nuit*, choisissez un joueur : il meurt. Si vous vous choisissez, vous mourez et un Sbire vivant devient l’Imp.",
+    "ability": "Chaque nuit*, choisissez un joueur : il meurt. Si vous vous choisissez, vous mourez et un Sbire vivant devient Diablotin.",
     "edition": "tb",
     "firstNight": 0,
     "firstNightReminder": "",
     "id": "imp",
-    "name": "Imp",
+    "name": "Diablotin",
     "otherNight": 24,
     "otherNightReminder": "Choisit un joueur qui est aussitôt assassiné. S’il se choisit, réveiller un Sbire vivant qui devient le nouveau Démon.",
     "reminders": [
@@ -602,12 +602,12 @@
     "team": "outsider"
   },
   {
-    "ability": "Le Démon croit que vous êtes un Sbire. Les Sbires croient que vous êtes le Démon.",
+    "ability": "Le Démon croit que vous êtes un Sbire. Les Sbires croient que vous êtes un Démon.",
     "edition": "",
     "firstNight": 0,
     "firstNightReminder": "",
     "id": "magician",
-    "name": "Magician",
+    "name": "Magicien",
     "otherNight": 0,
     "otherNightReminder": "",
     "reminders": [],
