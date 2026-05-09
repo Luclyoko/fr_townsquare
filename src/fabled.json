@@ -37,7 +37,7 @@
     "setup": false,
     "name": "Bibliothécaire",
     "team": "fabled",
-    "ability": "Quelque chose de grave pourrait arriver à quiconque parle lorsque le Conteur a demandé le silence"
+    "ability": "Quelque chose de grave pourrait arriver à quiconque parle lorsque le Conteur a demandé le silence."
   },
   {
     "id": "revolutionary",
@@ -57,18 +57,18 @@
     "setup": false,
     "name": "Trouble-Fête",
     "team": "fabled",
-    "ability": "Une fois par partie, le Démon choisit secrètement un joueur adverse: tous les joueurs (même règles que l’expulsion) choisissent lequel de ces 2 joueurs gagne. Le mal remporte les égalités"
+    "ability": "Une fois par partie, le Démon choisit secrètement un joueur adverse: tous les joueurs (même règles que l’expulsion) choisissent lequel de ces 2 joueurs gagne. Le mal remporte les égalités."
   },
   {
     "id": "toymaker",
     "firstNightReminder": "",
     "otherNight": 1,
-    "otherNightReminder": "Si c'est une nuit où une attaque de Démon pourrait mettre fin à la partie, et que le Démon est marqué « Pas d'attaque », alors le Démon n'agit pas cette nuit (ne pas le réveiller)",
+    "otherNightReminder": "Si c'est une nuit où une attaque de Démon pourrait mettre fin à la partie, et que le Démon est marqué « Pas d'attaque », alors le Démon n'agit pas cette nuit (ne pas le réveiller).",
     "reminders": ["Pas d'attaque"],
     "setup": false,
     "name": "Artisan",
     "team": "fabled",
-    "ability": "Le Démon peut choisir de ne pas attaquer et doit le faire au moins une fois par partie. Les joueurs maléfiques obtiennent les informations de départ normalement"
+    "ability": "Le Démon peut choisir de ne pas attaquer et doit le faire au moins une fois par partie. Les joueurs maléfiques obtiennent les informations de départ normalement."
   },
   {
     "id": "fibbin",
@@ -78,18 +78,18 @@
     "setup": false,
     "name": "Baratineur",
     "team": "fabled",
-    "ability": "Une fois par partie, un joueur « bon », peut obtenir de fausses informations"
+    "ability": "Une fois par partie, un joueur « bon », peut obtenir de fausses informations."
   },
   {
     "id": "duchess",
     "firstNightReminder": "",
     "otherNight": 1,
-    "otherNightReminder": "Réveillez chaque joueur « Visiteur » ou « Fausse Info » un à la fois. Montrez-leur le jeton Duchesse, puis les doigts (1, 2, 3) correspondant au nombre de joueurs maléfiques « Visiteur » ou, si vous réveillez le joueur marqué « Fausse Info », montrer lui n'importe quel nombre de doigts sauf le nombre de joueurs maléfiques « Visiteur »",
+    "otherNightReminder": "Réveillez chaque joueur « Visiteur » ou « Fausse Info » un à la fois. Montrez-leur le jeton Duchesse, puis les doigts (1, 2, 3) correspondant au nombre de joueurs maléfiques « Visiteur » ou, si vous réveillez le joueur marqué « Fausse Info », montrer lui n'importe quel nombre de doigts sauf le nombre de joueurs maléfiques « Visiteur ».",
     "reminders": ["Visiteur", "Fausse Info"],
     "setup": false,
     "name": "Duchesse",
     "team": "fabled",
-    "ability": "Chaque jour, trois joueurs peuvent choisir de vous rendre visite. La nuit*, chaque visiteur apprend combien de visiteurs sont maléfiques, mais un d’entre eux obtient de fausse information"
+    "ability": "Chaque jour, trois joueurs peuvent choisir de vous rendre visite. La nuit*, chaque visiteur apprend combien de visiteurs sont maléfiques, mais un d’entre eux obtient de fausse information."
   },
   {
     "id": "sentinel",
@@ -99,7 +99,7 @@
     "setup": true,
     "name": "Sentinelle",
     "team": "fabled",
-    "ability": "Il peut y avoir un Étranger supplémentaire ou un de moins dans la partie"
+    "ability": "Il peut y avoir un Étranger supplémentaire ou un de moins dans la partie."
   },
   {
     "id": "spiritofivory",
@@ -109,7 +109,7 @@
     "setup": false,
     "name": "Protectrice",
     "team": "fabled",
-    "ability": "Il ne peut pas y avoir plus d'un joueur maléfique supplémentaire en jeu"
+    "ability": "Il ne peut pas y avoir plus d'un joueur maléfique supplémentaire en jeu."
   },
   {
     "id": "djinn",
@@ -120,18 +120,18 @@
     "setup": false,
     "name": "Mauvais Génie",
     "team": "fabled",
-    "ability": "Seulement un des deux rôles du Duo est possiblement en jeu, les maléfiques savent de quel joueur et quel rôle il s'agit OU il y a une règle particulière avec certaines combinaisons de rôles"
+    "ability": "Seulement un des deux rôles du Duo est possiblement en jeu, les maléfiques savent de quel joueur et quel rôle il s'agit OU il y a une règle particulière avec certaines combinaisons de rôles."
   },
   {
     "id": "stormcatcher",
     "firstNight": 1,
-    "firstNightReminder": "Identifier un joueur Bon comme « Protégé ». Réveillez chaque maléfique et montrez-leur le joueur protégé",
+    "firstNightReminder": "Identifier un joueur Bon comme « Protégé ». Réveillez chaque maléfique et montrez-leur le joueur protégé.",
     "otherNightReminder": "",
     "reminders": ["Protégé"],
     "setup": false,
     "name": "Paratonnerre",
     "team": "fabled",
-    "ability": "Nommez un rôle « bon », s'il est en jeu, il ne peut mourir que par exécution, mais les maléfiques apprennent de quel joueur il s'agit"
+    "ability": "Nommez un rôle « bon », s'il est en jeu, il ne peut mourir que par exécution, mais les maléfiques apprennent de quel joueur il s'agit."
   },
   {
     "id": "deusexfiasco",
@@ -141,6 +141,6 @@
     "setup": false,
     "name": "Deus ex Fiasco",
     "team": "fabled",
-    "ability": "Une fois par partie, le Conteur commettra une erreur, la corrigera et l'admettra publiquement"
+    "ability": "Une fois par partie, le Conteur commettra une erreur, la corrigera et l'admettra publiquement."
   }
 ]

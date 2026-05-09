@@ -1043,7 +1043,7 @@
     "ability": "Chaque nuit, choisissez un joueur: il est empoisonné jusqu'à la nuit prochaine, puis il meurt et devient sain.",
     "edition": "bmr",
     "firstNight": 28,
-    "firstNightReminder": "The Pukka points to a player. That player is poisoned.",
+    "firstNightReminder": "Le Pooka choisit un joueur qui est alors empoisonné jusqu'à la nuit prochaine.",
     "id": "pukka",
     "name": "Pooka",
     "otherNight": 26,
@@ -1711,7 +1711,7 @@
     "team": "outsider"
   },
   {
-    "ability": "Chaque nuit, les Sbires choisissent qui garde le jeton P’tit Monstre et « est le Démon ». Un joueur meurt chaque nuit* [+1 Sbire]Chaque nuit, les Sbires choisissent qui garde le jeton P’tit Monstre et « est le Démon ». Un joueur meurt chaque nuit* [+1 Sbire].",
+    "ability": "Chaque nuit, les Sbires choisissent qui garde le jeton P’tit Monstre qui confère le statut de Démon. Un joueur meurt chaque nuit* [+1 Sbire].",
     "edition": "",
     "firstNight": 16,
     "firstNightReminder": "Au début de la nuit, réveillez tous les Sbires. Les Sbires désignent un joueur qui reçoit le jeton P'tit Monstre et devient le Démon.",
