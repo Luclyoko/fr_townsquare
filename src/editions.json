@@ -43,5 +43,14 @@
     "level": "Veteran",
     "roles": ["highpriestess", "general", "monk", "lycanthrope", "gossip", "savant", "fisherman", "alchemist", "amnesiac", "magician", "poppygrower", "atheist", "pacifist", "lunatic", "drunk", "plaguedoctor", "heretic", "devilsadvocate", "mezepheles", "wizard", "summoner", "baron", "yaggababble", "pukka", "lilmonsta", "ojo"],
     "isOfficial": false
+  },
+  {
+    "id": "ecp",
+    "name": "Everyone Can Play",
+    "author": "Ben Burns",
+    "description": "Advanced Trouble Brewing",
+    "level": "Intermediate",
+    "roles": ["librarian", "clockmaker", "grandmother", "fortuneteller", "empath", "monk", "undertaker", "gambler", "artist", "slayer", "fool", "ravenkeeper", "mayor", "drunk", "recluse", "saint", "moonchild", "baron", "poisoner", "assassin", "devilsadvocate", "spy", "scarletwoman", "imp"],
+    "isOfficial": false
   }
 ]

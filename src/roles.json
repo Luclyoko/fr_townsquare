@@ -61,9 +61,9 @@
     "firstNight": 39,
     "firstNightReminder": "Pointer sa descendance et montrer le rôle de celui-ci.",
     "id": "grandmother",
-    "name": "Mamie",
+    "name": "Grand-Mère",
     "otherNight": 50,
-    "otherNightReminder": "Si sa descendance a été tué par le démon cette nuit: La Mamie meurt.",
+    "otherNightReminder": "Si sa descendance a été tué par le démon cette nuit: La Grand-Mère meurt.",
     "reminders": [
       "Descendance"
     ],
@@ -796,7 +796,7 @@
     "firstNight": 0,
     "firstNightReminder": "",
     "id": "slayer",
-    "name": "Mercenaire",
+    "name": "Pourfendeur",
     "otherNight": 0,
     "otherNightReminder": "",
     "reminders": [
