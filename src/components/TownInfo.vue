@@ -7,7 +7,7 @@
         backgroundImage: `url(${
           edition.logo && grimoire.isImageOptIn
             ? edition.logo
-            : require('../assets/editions/' + edition.id + '.png')
+            : getEditionImage(edition.id)
         })`
       }"
     ></li>
@@ -76,6 +76,15 @@ import gameJSON from "./../game";
 import { mapState } from "vuex";
 
 export default {
+  methods: {
+    getEditionImage(editionId) {
+      try {
+        return require(`../assets/editions/${editionId}.png`);
+      } catch (e) {
+        return require("../assets/editions/custom.png");
+      }
+    }
+  },
   computed: {
     teams: function() {
       const { players } = this.$store.state.players;
