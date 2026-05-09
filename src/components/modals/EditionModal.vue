@@ -7,23 +7,19 @@
           v-for="edition in editions"
           class="edition"
           :class="['edition-' + edition.id]"
-          :style="{
-            backgroundImage: `url(${getEditionImage(edition.id)})`
-          }"
           :key="edition.id"
           @click="setEdition(edition)"
         >
+          <div class="edition-image" :style="{backgroundImage: `url(${getEditionImage(edition.id)})`}"></div>
           <span class="edition-name">{{ edition.name }}</span>
           <span class="edition-author" v-if="edition.author">{{ edition.author }}</span>
         </li>
         <li
           class="edition edition-custom"
           @click="isCustom = true"
-          :style="{
-            backgroundImage: `url(${require('../../assets/editions/custom.png')})`
-          }"
         >
-          {{ $t("Custom Script / Characters") }}
+          <div class="edition-image" :style="{backgroundImage: `url(${require('../../assets/editions/custom.png')})`}"></div>
+          <span class="edition-name">{{ $t("Custom Script / Characters") }}</span>
         </li>
       </ul>
     </div>
@@ -215,10 +211,6 @@ ul.editions .edition {
   font-family: PiratesBay, sans-serif;
   letter-spacing: 1px;
   text-align: center;
-  padding-top: 12%;
-  background-position: center top;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
   width: 23%;
   margin: 5px;
   font-size: 100%;
@@ -231,6 +223,14 @@ ul.editions .edition {
   &:hover {
     color: red;
   }
+  .edition-image {
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: 4px;
+  }
   .edition-name {
     display: block;
   }
@@ -240,7 +240,7 @@ ul.editions .edition {
     font-size: 70%;
     letter-spacing: 0;
     opacity: 0.75;
-    margin-top: 3px;
+    margin-top: 2px;
   }
 }
 
