@@ -63,7 +63,8 @@
           :key="index"
           @click="handleURL(script[1])"
         >
-          {{ script[0] }}
+          <span class="script-name">{{ script[0] }}</span>
+          <span class="script-author">{{ script[2] }}</span>
         </li>
       </ul>
       <input
@@ -103,27 +104,33 @@ export default {
       scripts: [
         [
           "Deadly Penance Day",
-          "https://gist.githubusercontent.com/david-urvoy/5cbf2a6dacf8b678cca2952c2b3c5f10/raw/e3fa9c422909b5c7a8713295fa2f1207faa23116/dpd-roles.json"
+          "https://gist.githubusercontent.com/david-urvoy/5cbf2a6dacf8b678cca2952c2b3c5f10/raw/e3fa9c422909b5c7a8713295fa2f1207faa23116/dpd-roles.json",
+          "david-urvoy"
         ],
         [
           "Catfishing 11.1",
-          "https://gist.githubusercontent.com/bra1n/8a5ec41a7bbf945f6b7dfc1cef72b569/raw/a312ab93c2f302e0ef83c8b65a4e8e82760fda3a/catfishing.json"
+          "https://gist.githubusercontent.com/bra1n/8a5ec41a7bbf945f6b7dfc1cef72b569/raw/a312ab93c2f302e0ef83c8b65a4e8e82760fda3a/catfishing.json",
+          "bra1n"
         ],
         [
           "On Thin Ice (Teensyville)",
-          "https://gist.githubusercontent.com/bra1n/8dacd9f2abc6f428331ea1213ab153f5/raw/0cacbcaf8ed9bddae0cca25a9ada97e9958d868b/on-thin-ice.json"
+          "https://gist.githubusercontent.com/bra1n/8dacd9f2abc6f428331ea1213ab153f5/raw/0cacbcaf8ed9bddae0cca25a9ada97e9958d868b/on-thin-ice.json",
+          "bra1n"
         ],
         [
           "Race To The Bottom (Teensyville)",
-          "https://gist.githubusercontent.com/bra1n/63e1354cb3dc9d4032bcd0623dc48888/raw/5acb0eedcc0a67a64a99c7e0e6271de0b7b2e1b2/race-to-the-bottom.json"
+          "https://gist.githubusercontent.com/bra1n/63e1354cb3dc9d4032bcd0623dc48888/raw/5acb0eedcc0a67a64a99c7e0e6271de0b7b2e1b2/race-to-the-bottom.json",
+          "bra1n"
         ],
         [
-          "Frankenstein's Mayor by Ted (Teensyville)",
-          "https://gist.githubusercontent.com/bra1n/32c52b422cc01b934a4291eeb81dbcee/raw/5bf770693bbf7aff5e86601c82ca4af3222f4ba6/Frankensteins_Mayor_by_Ted.json"
+          "Frankenstein's Mayor (Teensyville)",
+          "https://gist.githubusercontent.com/bra1n/32c52b422cc01b934a4291eeb81dbcee/raw/5bf770693bbf7aff5e86601c82ca4af3222f4ba6/Frankensteins_Mayor_by_Ted.json",
+          "Ted"
         ],
         [
           "Vigormortis High School (Teensyville)",
-          "https://gist.githubusercontent.com/bra1n/1f65bd4a999524719d5dabe98c3c2d27/raw/22bbec6bf56a51a7459e5ae41ed47e41971c5445/VigormortisHighSchool.json"
+          "https://gist.githubusercontent.com/bra1n/1f65bd4a999524719d5dabe98c3c2d27/raw/22bbec6bf56a51a7459e5ae41ed47e41971c5445/VigormortisHighSchool.json",
+          "bra1n"
         ]
       ]
     };
@@ -228,15 +235,32 @@ ul.editions .edition {
     display: none;
   }
   .scripts {
-    list-style-type: disc;
-    font-size: 120%;
+    list-style-type: none;
     cursor: pointer;
-    display: block;
-    width: 50%;
-    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
     margin: 10px auto;
-    li:hover {
-      color: red;
+    li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 25%;
+      padding: 6px 8px;
+      text-align: center;
+      &:hover {
+        color: red;
+      }
+      .script-name {
+        font-size: 100%;
+      }
+      .script-author {
+        font-size: 75%;
+        opacity: 0.7;
+        margin-top: 2px;
+      }
     }
   }
 }
