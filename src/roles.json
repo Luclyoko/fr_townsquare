@@ -1972,5 +1972,83 @@
     "id": "stormcatcher",
     "name": "Storm Catcher",
     "team": "fabled"
+  },
+  {
+    "ability": "Chaque nuit, vous apprenez à quel joueur le conteur pense que vous devriez parler le plus.",
+    "edition": "",
+    "firstNight": 50,
+    "firstNightReminder": "Pointez du doigt la personne à qui la Haute Prêtresse devrait parler le plus.",
+    "id": "highpriestress",
+    "name": "Grande Prêtresse",
+    "otherNight": 69,
+    "otherNightReminder": "Pointez du doigt la personne à qui la Haute Prêtresse devrait parler le plus.",
+    "reminders": [],
+    "setup": false,
+    "team": "townsfolk"
+  },
+  {
+    "ability": "Si vous mourrez aujourd'hui ou ce soir, le conteur obtient le pouvoir d'un sbire.",
+    "edition": "",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "plaguedoctor",
+    "name": "Médecin de la peste",
+    "otherNight": 41,
+    "otherNightReminder": "",
+    "reminders": ["Pouvoir de sbire"],
+    "setup": false,
+    "team": "outsider"
+  },
+  {
+    "ability": "Une fois par partie, vous pouvez faire un voeu. Pour qu'il soit réalisé, il peut y avoir un prix et un indice sur sa nature.",
+    "edition": "",
+    "firstNight": 18,
+    "firstNightReminder": "",
+    "id": "wizard",
+    "name": "Sorcier",
+    "otherNight": 10,
+    "otherNightReminder": "",
+    "reminders": ["Accordé"],
+    "setup": false,
+    "team": "minion"
+  },
+  {
+    "ability": "Vous obtenez 3 bluffs. La troisième nuit, choisissez un joueur, il devient le démon de votre choix [Pas de Démon].",
+    "edition": "",
+    "firstNight": 14,
+    "firstNightReminder": "Montrez trois bluffs qui ne sont pas en jeu.",
+    "id": "summoner",
+    "name": "Invocateur",
+    "otherNight": 20,
+    "otherNightReminder": "Si c'est la troisième nuit, réveillez l'Invocateur. L'invocateur choisit un joueur en jeu et un Démon que ce dernier devient.",
+    "reminders": ["Utilisé", "Nuit 1", "Nuit 2"],
+    "setup": true,
+    "team": "minion"
+  },
+  {
+    "ability": "Vous obtenez une phrase secrète. Il se peut qu'une personne meure avant le prochain jour chaque fois que vous la prononcez publiquement.",
+    "edition": "",
+    "firstNight": 13,
+    "firstNightReminder": "Le Yaggabable apprend sa phrase secrète.",
+    "id": "yaggabable",
+    "name": "Yaggabable",
+    "otherNight": 35,
+    "otherNightReminder": "Vous pouvez tuer jusqu'à autant de joueur que le nombre de fois que le Yaggabable a dit sa phrase secrète publiquement.",
+    "reminders": ["Mort"],
+    "setup": false,
+    "team": "demon"
+  },
+  {
+    "ability": "Chaque nuit* : choisissez un rôle, il meurt. S'il n'est pas dans la partie, le conteur choisit qui meurt.",
+    "edition": "",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "id": "ojo",
+    "name": "Ojo",
+    "otherNight": 35,
+    "otherNightReminder": "Le Ojo choisit un rôle, il meurt. S'il n'est pas dans la partie, le conteur choisit qui meurt.",
+    "reminders": ["Mort"],
+    "setup": false,
+    "team": "demon"
   }
 ]

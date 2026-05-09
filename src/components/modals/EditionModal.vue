@@ -8,9 +8,7 @@
           class="edition"
           :class="['edition-' + edition.id]"
           :style="{
-            backgroundImage: `url(${require('../../assets/editions/' +
-              edition.id +
-              '.png')})`
+            backgroundImage: `url(${getEditionImage(edition.id)})`
           }"
           :key="edition.id"
           @click="setEdition(edition)"
@@ -132,6 +130,13 @@ export default {
   },
   computed: mapState(["modals"]),
   methods: {
+    getEditionImage(editionId) {
+      try {
+        return require(`../../assets/editions/${editionId}.png`);
+      } catch (e) {
+        return require("../../assets/editions/custom.png");
+      }
+    },
     openUpload() {
       this.$refs.upload.click();
     },

@@ -34,5 +34,14 @@
     "level": "Veteran",
     "roles": ["balloonist", "savant", "amnesiac", "fisherman", "artist", "cannibal", "mutant", "lunatic", "widow", "goblin", "leviathan"],
     "isOfficial": true
+  },
+  {
+    "id": "igwt",
+    "name": "In God We Trust",
+    "author": "Linked42",
+    "description": "",
+    "level": "Veteran",
+    "roles": ["highpriestress", "general", "monk", "lycanthrope", "gossip", "savant", "fisherman", "alchemist", "amnesiac", "magician", "poppygrower", "atheist", "pacifist", "lunatic", "drunk", "plaguedoctor", "heretic", "devilsadvocate", "mezepheles", "wizard", "summoner", "baron", "yaggabable", "pukka", "lilmonsta", "ojo"],
+    "isOfficial": false
   }
 ]
