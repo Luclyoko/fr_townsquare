@@ -13,7 +13,8 @@
           :key="edition.id"
           @click="setEdition(edition)"
         >
-          {{ edition.name }}
+          <span class="edition-name">{{ edition.name }}</span>
+          <span class="edition-author" v-if="edition.author">{{ edition.author }}</span>
         </li>
         <li
           class="edition edition-custom"
@@ -214,18 +215,32 @@ ul.editions .edition {
   font-family: PiratesBay, sans-serif;
   letter-spacing: 1px;
   text-align: center;
-  padding-top: 15%;
-  background-position: center center;
+  padding-top: 12%;
+  background-position: center top;
   background-size: 100% auto;
   background-repeat: no-repeat;
-  width: 30%;
+  width: 23%;
   margin: 5px;
-  font-size: 120%;
+  font-size: 100%;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000, 0 0 5px rgba(0, 0, 0, 0.75);
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   &:hover {
     color: red;
+  }
+  .edition-name {
+    display: block;
+  }
+  .edition-author {
+    display: block;
+    font-family: sans-serif;
+    font-size: 70%;
+    letter-spacing: 0;
+    opacity: 0.75;
+    margin-top: 3px;
   }
 }
 
