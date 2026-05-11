@@ -149,11 +149,16 @@ class LiveSession {
         if (!this._isSpectator) return;
         if (!params) {
           // create vote history record
+          const wasBlind = this._store.state.session.isBlindVote;
           this._store.commit(
             "session/addHistory",
             this._store.state.players.players
           );
           this._store.commit("session/nomination", {});
+          // hide the execution mark from players when a blind vote closes
+          if (wasBlind) {
+            this._store.commit("session/setMarkedPlayer", -1);
+          }
         } else {
           const { nomination, isBlindVote } = params;
           this._store.commit("session/nomination", { nomination, isBlindVote });
