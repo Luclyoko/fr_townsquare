@@ -24,6 +24,7 @@ const state = () => ({
   lockedVote: 0,
   votingSpeed: 3000,
   isVoteInProgress: false,
+  isBlindVote: false,
   voteHistory: [],
   markedPlayer: -1,
   isVoteHistoryAllowed: true,
@@ -47,6 +48,7 @@ const mutations = {
   setPing: set("ping"),
   setVotingSpeed: set("votingSpeed"),
   setVoteInProgress: set("isVoteInProgress"),
+  setBlindVote: set("isBlindVote"),
   setMarkedPlayer: set("markedPlayer"),
   setNomination: set("nomination"),
   setVoteHistoryAllowed: set("isVoteHistoryAllowed"),
@@ -60,13 +62,14 @@ const mutations = {
   },
   nomination(
     state,
-    { nomination, votes, votingSpeed, lockedVote, isVoteInProgress } = {}
+    { nomination, votes, votingSpeed, lockedVote, isVoteInProgress, isBlindVote } = {}
   ) {
     state.nomination = nomination || false;
     state.votes = votes || [];
     state.votingSpeed = votingSpeed || state.votingSpeed;
     state.lockedVote = lockedVote || 0;
     state.isVoteInProgress = isVoteInProgress || false;
+    state.isBlindVote = isBlindVote || false;
   },
   /**
    * Create an entry in the vote history log. Requires current player array because it might change later in the game.
@@ -83,6 +86,7 @@ const mutations = {
       nominator: players[state.nomination[0]].name,
       nominee: players[state.nomination[1]].name,
       type: isExile ? "Exile" : "Execution",
+      isBlind: state.isBlindVote,
       majority: Math.ceil(
         players.filter(player => !player.isDead || isExile).length / 2
       ),

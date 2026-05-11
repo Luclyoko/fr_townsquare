@@ -88,6 +88,10 @@
 	"Hand DOWN": "Voter POUR",
 	"Hand UP": "Voter CONTRE",
 	"Please claim a seat to vote": "Prenez un siège pour voter",
+	"Blind vote": "Vote aveugle",
+	"Normal vote": "Vote normal",
+	"Blind vote in progress": "Vote à l'aveugle en cours",
+	"Blind": "Aveugle",
 
 	"Select an edition:": "Choisir une composition :",
 	"Custom Script / Characters": "Composition / Roles personnalisés",

@@ -130,7 +130,7 @@ export default {
           "bra1n"
         ],
         [
-          "Everything always goes like this",
+          "Everything always goes like this (Teensyville)",
           "https://cdn.discordapp.com/attachments/1061378478525657108/1503426429243625482/everything_always_goes_like_this_1.json?ex=6a034e79&is=6a01fcf9&hm=c81a32e1533ab44f2463cec33b5ac41d42e5e1e197c67fe55f9503ec13d34844&",
           "Celebix"
         ]

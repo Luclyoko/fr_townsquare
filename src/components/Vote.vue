@@ -10,15 +10,20 @@
       <em>{{ nominee.name }}</em
       >!
       <br />
-      <em class="blue">
-        {{ voters.length }} {{ $t("vote") }}{{ voters.length !== 1 ? "s" : "" }}
-      </em>
-      {{ $t("in favor") }}
-      <em v-if="nominee.role.team !== 'traveler'">
-        ({{ $t("majority is") }} {{ Math.ceil(alive / 2) }})
-      </em>
-      <em v-else>
-        ({{ $t("majority is") }} {{ Math.ceil(players.length / 2) }})
+      <template v-if="!session.isSpectator || !session.isBlindVote">
+        <em class="blue">
+          {{ voters.length }} {{ $t("vote") }}{{ voters.length !== 1 ? "s" : "" }}
+        </em>
+        {{ $t("in favor") }}
+        <em v-if="nominee.role.team !== 'traveler'">
+          ({{ $t("majority is") }} {{ Math.ceil(alive / 2) }})
+        </em>
+        <em v-else>
+          ({{ $t("majority is") }} {{ Math.ceil(players.length / 2) }})
+        </em>
+      </template>
+      <em v-else class="blind-info">
+        {{ $t("Blind vote in progress") }}
       </em>
 
       <template v-if="!session.isSpectator">
@@ -33,6 +38,19 @@
             @mousedown.prevent="setVotingSpeed(500)"
             icon="plus-circle"
           />
+        </div>
+        <div
+          v-if="!session.isVoteInProgress && session.lockedVote < 1"
+          class="button-group blind-toggle"
+        >
+          <div
+            class="button"
+            :class="{ active: session.isBlindVote }"
+            @click="toggleBlindVote"
+          >
+            <font-awesome-icon :icon="session.isBlindVote ? 'eye-slash' : 'eye'" />
+            {{ session.isBlindVote ? $t("Blind vote") : $t("Normal vote") }}
+          </div>
         </div>
         <div class="button-group">
           <div
@@ -75,6 +93,9 @@
       <template v-else-if="canVote">
         <div v-if="!session.isVoteInProgress">
           {{ session.votingSpeed / 1000 }} {{ $t("seconds between votes") }}
+        </div>
+        <div v-if="session.isBlindVote" class="blind-notice">
+          {{ $t("Blind vote in progress") }}
         </div>
         <div class="button-group">
           <div
@@ -249,6 +270,9 @@ export default {
     },
     removeMarked() {
       this.$store.commit("session/setMarkedPlayer", -1);
+    },
+    toggleBlindVote() {
+      this.$store.commit("session/setBlindVote", !this.session.isBlindVote);
     }
   }
 };
@@ -274,6 +298,22 @@ export default {
   .mark .button {
     font-size: 75%;
     margin: 0;
+  }
+
+  .blind-toggle .button {
+    font-size: 80%;
+    opacity: 0.7;
+    &.active {
+      opacity: 1;
+      color: $demon;
+    }
+  }
+
+  .blind-info {
+    color: $demon;
+    font-size: 85%;
+    display: block;
+    margin-top: 3px;
   }
 
   &:after {

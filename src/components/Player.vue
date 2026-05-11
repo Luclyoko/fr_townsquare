@@ -6,7 +6,7 @@
       :class="[
         {
           dead: player.isDead,
-          marked: session.markedPlayer === index,
+          marked: session.markedPlayer === index && (!session.isBlindVote || !session.isSpectator),
           'no-vote': player.isVoteless,
           you: session.sessionId && player.id && player.id === session.playerId,
           'vote-yes': session.votes[index],

@@ -63,7 +63,15 @@
           </td>
           <td>{{ vote.nominator }}</td>
           <td>{{ vote.nominee }}</td>
-          <td>{{ vote.type }}</td>
+          <td>
+            {{ vote.type }}
+            <font-awesome-icon
+              v-if="vote.isBlind"
+              icon="eye-slash"
+              :title="$t('Blind')"
+              class="blind-icon"
+            />
+          </td>
           <td>
             {{ vote.votes.length }}
             <font-awesome-icon icon="hand-paper" />
@@ -78,7 +86,10 @@
             />
           </td>
           <td>
-            {{ vote.votes.join(", ") }}
+            <template v-if="!vote.isBlind || !session.isSpectator">
+              {{ vote.votes.join(", ") }}
+            </template>
+            <em v-else>{{ $t("Blind") }}</em>
           </td>
         </tr>
       </tbody>

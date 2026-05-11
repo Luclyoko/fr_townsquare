@@ -153,8 +153,11 @@ class LiveSession {
             "session/addHistory",
             this._store.state.players.players
           );
+          this._store.commit("session/nomination", {});
+        } else {
+          const { nomination, isBlindVote } = params;
+          this._store.commit("session/nomination", { nomination, isBlindVote });
         }
-        this._store.commit("session/nomination", { nomination: params });
         break;
       case "swap":
         if (!this._isSpectator) return;
@@ -283,6 +286,7 @@ class LiveSession {
         isNight: grimoire.isNight,
         isVoteHistoryAllowed: session.isVoteHistoryAllowed,
         nomination: session.nomination,
+        isBlindVote: session.isBlindVote,
         votingSpeed: session.votingSpeed,
         lockedVote: session.lockedVote,
         isVoteInProgress: session.isVoteInProgress,
@@ -306,6 +310,7 @@ class LiveSession {
       isNight,
       isVoteHistoryAllowed,
       nomination,
+      isBlindVote,
       votingSpeed,
       votes,
       lockedVote,
@@ -363,7 +368,8 @@ class LiveSession {
         votes,
         votingSpeed,
         lockedVote,
-        isVoteInProgress
+        isVoteInProgress,
+        isBlindVote
       });
       this._store.commit("session/setMarkedPlayer", markedPlayer);
       this._store.commit("players/setFabled", {
@@ -687,7 +693,12 @@ class LiveSession {
       (players.length > nomination[0] && players.length > nomination[1])
     ) {
       this.setVotingSpeed(this._store.state.session.votingSpeed);
-      this._send("nomination", nomination);
+      if (nomination) {
+        const { isBlindVote } = this._store.state.session;
+        this._send("nomination", { nomination, isBlindVote });
+      } else {
+        this._send("nomination", null);
+      }
     }
   }
 
@@ -803,11 +814,17 @@ class LiveSession {
     if (!this._isSpectator) return;
     this._store.commit("session/lockVote", lock);
     if (lock > 1) {
-      const { lockedVote, nomination } = this._store.state.session;
+      const { lockedVote, nomination, isBlindVote } = this._store.state.session;
       const { players } = this._store.state.players;
       const index = (nomination[1] + lockedVote - 1) % players.length;
-      if (this._store.state.session.votes[index] !== vote) {
-        this._store.commit("session/vote", [index, vote]);
+      // In blind vote mode, only sync the current player's own vote
+      const ownIndex = players.findIndex(
+        p => p.id === this._store.state.session.playerId
+      );
+      if (!isBlindVote || index === ownIndex) {
+        if (this._store.state.session.votes[index] !== vote) {
+          this._store.commit("session/vote", [index, vote]);
+        }
       }
     }
   }
