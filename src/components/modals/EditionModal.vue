@@ -128,6 +128,11 @@ export default {
           "Vigormortis High School (Teensyville)",
           "https://gist.githubusercontent.com/bra1n/1f65bd4a999524719d5dabe98c3c2d27/raw/22bbec6bf56a51a7459e5ae41ed47e41971c5445/VigormortisHighSchool.json",
           "bra1n"
+        ],
+        [
+          "Everything always goes like this",
+          "https://cdn.discordapp.com/attachments/1061378478525657108/1503426429243625482/everything_always_goes_like_this_1.json?ex=6a034e79&is=6a01fcf9&hm=c81a32e1533ab44f2463cec33b5ac41d42e5e1e197c67fe55f9503ec13d34844&",
+          "Celebix"
         ]
       ]
     };
