@@ -9,8 +9,8 @@
           marked: session.markedPlayer === index && (!session.isBlindVote || !session.isSpectator),
           'no-vote': player.isVoteless,
           you: session.sessionId && player.id && player.id === session.playerId,
-          'vote-yes': session.votes[index],
-          'vote-lock': voteLocked
+          'vote-yes': session.votes[index] && (!session.isBlindVote || !session.isSpectator || player.id === session.playerId),
+          'vote-lock': voteLocked && (!session.isBlindVote || !session.isSpectator || player.id === session.playerId)
         },
         player.role.team
       ]"

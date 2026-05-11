@@ -200,6 +200,10 @@ class LiveSession {
         if (!this._isSpectator) return;
         this._store.commit("session/setVoteInProgress", params);
         break;
+      case "blindVote":
+        if (!this._isSpectator) return;
+        this._store.commit("session/setBlindVote", params);
+        break;
       case "vote":
         this._handleVote(params);
         break;
@@ -750,6 +754,14 @@ class LiveSession {
   }
 
   /**
+   * Send the isBlindVote state. ST only
+   */
+  setBlindVote() {
+    if (this._isSpectator) return;
+    this._send("blindVote", this._store.state.session.isBlindVote);
+  }
+
+  /**
    * Clear the vote history for everyone. ST only
    */
   clearVoteHistory() {
@@ -789,6 +801,13 @@ class LiveSession {
     const indexAdjusted =
       (index - 1 + playerCount - session.nomination[1]) % playerCount;
     if (fromST || indexAdjusted >= session.lockedVote - 1) {
+      // In blind vote mode, players only receive their own vote
+      if (session.isBlindVote && this._isSpectator) {
+        const ownIndex = players.players.findIndex(
+          p => p.id === session.playerId
+        );
+        if (index !== ownIndex) return;
+      }
       this._store.commit("session/vote", [index, vote]);
     }
   }
@@ -895,6 +914,9 @@ export default store => {
         break;
       case "session/setVoteInProgress":
         session.setVoteInProgress(payload);
+        break;
+      case "session/setBlindVote":
+        session.setBlindVote();
         break;
       case "session/voteSync":
         session.vote(payload);
