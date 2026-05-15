@@ -142,5 +142,15 @@
     "name": "Deus ex Fiasco",
     "team": "fabled",
     "ability": "Une fois par partie, le Conteur commettra une erreur, la corrigera et l'admettra publiquement."
+  },
+  {
+    "id": "faith",
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false,
+    "name": "La Foi",
+    "team": "fabled",
+    "ability": "Si X joueurs ou moins sont vivants, les votes se font désormais les yeux fermés. [X est un nombre déterminé au début de la partie par le Maître du Jeu]"
   }
 ]
