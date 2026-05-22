@@ -151,6 +151,6 @@
     "setup": false,
     "name": "La Foi",
     "team": "fabled",
-    "ability": "Si X joueurs ou moins sont vivants, les votes se font désormais les yeux fermés. [X est un nombre déterminé au début de la partie par le Maître du Jeu]"
+    "ability": "Si X joueurs ou plus sont vivants, les votes se font désormais les yeux fermés. [X est un nombre déterminé au début de la partie par le Maître du Jeu]"
   }
 ]
