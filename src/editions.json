@@ -52,5 +52,14 @@
     "level": "Intermediate",
     "roles": ["librarian", "clockmaker", "grandmother", "fortuneteller", "empath", "monk", "undertaker", "gambler", "artist", "slayer", "fool", "ravenkeeper", "mayor", "drunk", "recluse", "saint", "moonchild", "baron", "poisoner", "assassin", "devilsadvocate", "spy", "scarletwoman", "imp"],
     "isOfficial": false
+  },
+  {
+    "id": "avat",
+    "name": "Arriverez-vous à temps ?",
+    "author": "Gryfyx",
+    "description": "",
+    "level": "Intermediate",
+    "roles": ["chef", "noble", "investigator", "shugenja", "empath", "highpriestess", "villageidiot", "dreamer", "flowergirl", "savant", "seamstress", "artist", "juggler", "drunk", "sweetheart", "mutant", "puzzlemaster", "mezepheles", "poisoner", "spy", "baron", "riot"],
+    "isOfficial": false
   }
 ]
